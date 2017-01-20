@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500&subset=cyrillic');
+
+@darkPrimaryColor:   #1976D2;
+@primaryColor:       #2196F3;
+@lightPrimaryColor:  #BBDEFB;
+@textPrimaryColor:   #FFFFFF;
+@accentColor:        #FF9800;
+@primaryTextColor:   #212121;
+@secondaryTextColor: #727272;
+@dividerColor:       #B6B6B6;
+
+
+figure{
+  margin: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+ol{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+img{
+  width: 100%;
+  font-size: 0;
+}
+
+h1{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+p{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: @primaryColor;
+}
+
+div, section, article, header, main, footer{
+	box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"]{
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: @darkPrimaryColor;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+input::-webkit-input-placeholder{
+  font-size: 16px;
+  opacity: 1;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: @darkPrimaryColor;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+input::-moz-placeholder{
+  font-size: 16px;
+  opacity: 1;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: @darkPrimaryColor;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}/* Firefox 19+ */
+input:-moz-placeholder{
+  font-size: 16px;
+  opacity: 1;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: @darkPrimaryColor;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}/* Firefox 18- */
+input:-ms-input-placeholder{
+  font-size: 16px;
+  opacity: 1;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: @darkPrimaryColor;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+input:focus::-webkit-input-placeholder {opacity: 0;}
+input:focus::-moz-placeholder          {opacity: 0;}
+input:focus:-moz-placeholder           {opacity: 0;}
+input:focus:-ms-input-placeholder      {opacity: 0;}
+
+body{
+	display: flex;
+	justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 20px;
+  color: @primaryTextColor;
+  overflow-x: hidden;
+}
