@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500&subset=cyrillic');
-
 @darkPrimaryColor:   #1976D2;
 @primaryColor:       #2196F3;
 @lightPrimaryColor:  #BBDEFB;
@@ -8,7 +6,6 @@
 @primaryTextColor:   #212121;
 @secondaryTextColor: #727272;
 @dividerColor:       #B6B6B6;
-
 
 figure{
   margin: 0;
@@ -33,6 +30,10 @@ img{
   font-size: 0;
 }
 
+button{
+  padding: 0;
+}
+
 h1{
 
 }
@@ -50,7 +51,7 @@ a{
   color: @primaryColor;
 }
 
-div, section, article, header, main, footer{
+div, section, article, header, main, footer, button{
 	box-sizing: border-box;
 }
 
@@ -100,6 +101,10 @@ input:focus::-moz-placeholder          {opacity: 0;}
 input:focus:-moz-placeholder           {opacity: 0;}
 input:focus:-ms-input-placeholder      {opacity: 0;}
 
+.materialStaticShadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
 body{
 	display: flex;
 	justify-content: center;
@@ -107,7 +112,7 @@ body{
   width: 100%;
   margin: 0 auto;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto';
   color: @primaryTextColor;
   overflow-x: hidden;
 }
@@ -240,14 +245,15 @@ main{
   margin: 20px 0 10px 0;
   text-align: center;
   text-transform: uppercase;
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 400;
 }
 
 .screen__description{
+  text-align: center;
   font-size: 16px;
   font-weight: 300;
-  line-height: 22.5px;
+  line-height: 1.4 * 16px;
 }
 
 .portfolio{
@@ -265,7 +271,7 @@ main{
   padding: 60px 20px;
 }
 
-.portfolio__title{
+.section__title{
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -277,17 +283,167 @@ main{
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .card{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 250px;
+  width: 23.5%;
+  max-width: 270px;
   border-radius: 2px;
+  .materialStaticShadow;
+}
+
+.card__header{
+  padding: 20px;
+  border-radius: 2px 2px 0 0;
+  background: @primaryColor;
 }
 
 .card__pic{
-  background: @primaryColor;
+  font-size: 0;
+}
+
+.card__title{
+  height: 50px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4 * 18px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.card__footer{
+  padding: 30px 20px 20px 20px;
+  border-radius: 0 0 2px 2px;
+  background: #fff;
+  color: @secondaryTextColor;
+  position: relative;
+}
+
+.card__description{
+  height: 57px;
+  line-height: 1.4 * 14px;
+  overflow: hidden;
+}
+
+.card__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -22.5px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: @accentColor;
+  overflow: hidden;
+  .materialStaticShadow;
+  z-index: 1;
+}
+
+.card__a{
+  width: 45px;
+  height: 45px;
+  background-image: url("../img/clicker.svg");
+  background-repeat: no-repeat;
+  background-size: 22.5px;
+  background-position: 10px 10px;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ink {
+  display: block;
+  position: absolute;
+  background: rgba(33, 33, 33, 0.3);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  transform: scale(0);
+}
+.ink.animate {
+  animation: ripple 0.6s linear;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 960px){
+  .portfolio__cards{
+    flex-wrap: wrap;
+  }
+
+  .card{
+    width: 47.5%;
+    max-width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .screen__title{
+    font-size: 48px;
+  }
+
+  .section__title{
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 480px){
+  .card{
+    width: 100%;
+  }
+
+  .screen__title{
+    font-size: 38px;
+  }
+
+  .section__title{
+    font-size: 32px;
+  }
 }
