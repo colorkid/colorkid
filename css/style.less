@@ -42,6 +42,10 @@ h2{
   
 }
 
+h4{
+  margin: 0;
+}
+
 p{
   margin: 0;
 }
@@ -198,6 +202,9 @@ body{
 }
 
 main{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   background: #f2f2f2;
 }
@@ -259,7 +266,10 @@ main{
 .portfolio{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
+  max-width: 1200px;
+  padding: 60px 20px;
 }
 
 .portfolio__wrapper{
@@ -271,7 +281,7 @@ main{
   padding: 60px 20px;
 }
 
-.section__title{
+.title{
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -357,6 +367,112 @@ main{
   z-index: 1;
 }
 
+.skills{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.skill{
+  display: flex;
+  width: 49%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 2px;
+  background: #fff;
+  .materialStaticShadow;
+}
+
+.skill__pic{
+  width: 90px;
+  height: 85px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 50%;
+}
+
+.skill__pic--html{
+  background-image: url("../img/html5.png");
+}
+
+.skill__txt{
+  width: 100%;
+  margin-left: 10px;
+}
+
+.skill__title{
+  margin-bottom: 2.5px;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: @accentColor;
+}
+
+.skill__description{
+  height: 57px;
+  overflow: hidden;
+  line-height: 1.4 * 14px;
+  color: @secondaryTextColor;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -429,7 +545,7 @@ main{
     font-size: 48px;
   }
 
-  .section__title{
+  .title{
     font-size: 38px;
   }
 }
@@ -443,7 +559,7 @@ main{
     font-size: 38px;
   }
 
-  .section__title{
+  .title{
     font-size: 32px;
   }
 }

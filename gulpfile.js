@@ -22,7 +22,7 @@ gulp.task('less', function () {
 
 gulp.task('watch', ['browserSync', 'less'], function (){
   gulp.watch('css/*.less', ['less']);
-  gulp.watch('index.html');
+  gulp.watch('index.html', browserSync.reload);
 });
 
 gulp.task('browserSync', function() {

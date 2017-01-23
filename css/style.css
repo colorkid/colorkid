@@ -19,6 +19,9 @@ img {
 button {
   padding: 0;
 }
+h4 {
+  margin: 0;
+}
 p {
   margin: 0;
 }
@@ -188,6 +191,12 @@ body {
   background: #cc7a00;
 }
 main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
   background: #f2f2f2;
 }
@@ -254,7 +263,11 @@ main {
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
+  max-width: 1200px;
+  padding: 60px 20px;
 }
 .portfolio__wrapper {
   display: -ms-flexbox;
@@ -267,7 +280,7 @@ main {
   max-width: 1200px;
   padding: 60px 20px;
 }
-.section__title {
+.title {
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -351,6 +364,53 @@ main {
   background-position: 10px 10px;
   z-index: 1;
 }
+.skills {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+.skill {
+  display: -ms-flexbox;
+  display: flex;
+  width: 49%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.skill__pic {
+  width: 90px;
+  height: 85px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 50%;
+}
+.skill__pic--html {
+  background-image: url("../img/html5.png");
+}
+.skill__txt {
+  width: 100%;
+  margin-left: 10px;
+}
+.skill__title {
+  margin-bottom: 2.5px;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #FF9800;
+}
+.skill__description {
+  height: 57px;
+  overflow: hidden;
+  line-height: 19.6px;
+  color: #727272;
+}
 .ink {
   display: block;
   position: absolute;
@@ -382,7 +442,7 @@ main {
   .screen__title {
     font-size: 48px;
   }
-  .section__title {
+  .title {
     font-size: 38px;
   }
 }
@@ -393,7 +453,7 @@ main {
   .screen__title {
     font-size: 38px;
   }
-  .section__title {
+  .title {
     font-size: 32px;
   }
 }
