@@ -481,6 +481,29 @@ main {
   font-weight: 300;
   line-height: 22.4px;
 }
+.myself {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  padding: 60px 20px;
+}
+.myself__message {
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 2px;
+  background: #fff;
+}
+.myself__txt {
+  padding: 7.5px 0;
+  font-size: 14px;
+  line-height: 19.6px;
+  color: #727272;
+}
 .ink {
   display: block;
   position: absolute;
@@ -527,15 +550,21 @@ main {
   .skill__description {
     height: auto;
   }
+  .myself__txt {
+    line-height: 22.4px;
+    color: #727272;
+  }
 }
 @media (max-width: 480px) {
   .card {
     width: 100%;
     margin-bottom: 5%;
   }
-  .screen__title,
-  .tools__title {
+  .screen__title {
     font-size: 38px;
+  }
+  .tools__title {
+    font-size: 32px;
   }
   .title {
     font-size: 32px;

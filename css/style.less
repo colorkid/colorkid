@@ -455,11 +455,29 @@ main{
   .screen__description;
 }
 
+.myself{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  padding: 60px 20px;
+}
 
+.myself__message{
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 2px;
+  background: #fff;
 
+}
 
-
-
+.myself__txt{
+  padding: 7.5px 0;
+  font-size: 14px;
+  line-height: 1.4 * 14px;
+  color: @secondaryTextColor;
+}
 
 
 
@@ -594,6 +612,11 @@ main{
   .skill__description{
     height: auto;
   }
+
+  .myself__txt{
+    line-height: 1.6 * 14px;
+    color: @secondaryTextColor;
+  }
 }
 
 @media (max-width: 480px){
@@ -602,9 +625,12 @@ main{
     margin-bottom: 5%;
   }
 
-  .screen__title,
-  .tools__title{
+  .screen__title{
     font-size: 38px;
+  }
+
+  .tools__title{
+    font-size: 32px;
   }
 
   .title{
