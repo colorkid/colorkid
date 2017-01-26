@@ -501,8 +501,94 @@ main {
 .myself__txt {
   padding: 7.5px 0;
   font-size: 14px;
-  line-height: 19.6px;
+  line-height: 21px;
   color: #727272;
+}
+.myself__form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 60px auto;
+}
+.myself__label {
+  width: 100%;
+}
+.myself__textarea {
+  width: 100%;
+  margin: 5px 0;
+  border: 1px solid #fff;
+  background: #fff;
+}
+.myself__textarea:focus {
+  outline: none;
+  border-color: #FF9800;
+}
+.wrapper-button {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.myself__button {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #FF9800;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  transition-property: background;
+}
+.myself__button:hover {
+  background: #e68900;
+}
+.myself__button:focus {
+  outline: none;
+}
+.great-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  background: #1976D2;
+  box-shadow: 0 1px 1px 0 rgba(33, 33, 33, 0.5);
+}
+.great-footer__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  padding: 0 20px;
+}
+.social {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.social__li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 5px;
 }
 .ink {
   display: block;
@@ -552,7 +638,6 @@ main {
   }
   .myself__txt {
     line-height: 22.4px;
-    color: #727272;
   }
 }
 @media (max-width: 480px) {
@@ -571,5 +656,9 @@ main {
   }
   .skill__pic {
     display: none;
+  }
+  .card__description,
+  .skill__description {
+    line-height: 22.4px;
   }
 }
