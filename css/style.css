@@ -35,7 +35,9 @@ article,
 header,
 main,
 footer,
-button {
+button,
+a,
+input {
   box-sizing: border-box;
 }
 input[type="text"],
@@ -594,19 +596,39 @@ main {
   width: 35px;
   height: 35px;
   margin: 0 10px;
+}
+.social__a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
   border-radius: 2px;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 50%;
 }
-.social__li--vk {
-  background-image: url("../img/vk.svg");
+.social__a:hover {
+  border-color: #FF9800;
 }
-.social__li--gt {
-  background-image: url("../img/gt.svg");
+.social__a:hover .icon path {
+  fill: #FF9800;
 }
-.social__li--fs {
-  background-image: url("../img/fc.svg");
+.social__a:hover .icon ellipse {
+  fill: #FF9800;
+}
+.social__li--vk .icon {
+  width: 70%;
+}
+.social__li--gt .icon {
+  width: 65%;
+}
+.social__li--fs .icon {
+  width: 60%;
+}
+.icon {
+  width: 100%;
 }
 .ink {
   display: block;
