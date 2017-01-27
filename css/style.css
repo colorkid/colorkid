@@ -512,10 +512,12 @@ main {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 50%;
-  margin: 60px auto;
+  margin: 60px auto 10px auto;
 }
 .myself__label {
   width: 100%;
+  font-size: 12px;
+  color: #727272;
 }
 .myself__textarea {
   width: 100%;
@@ -533,6 +535,7 @@ main {
   border-radius: 2px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .myself__button {
   width: 100%;
@@ -558,7 +561,7 @@ main {
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
-  height: 50px;
+  padding: 20px 0;
   color: #fff;
   background: #1976D2;
   box-shadow: 0 1px 1px 0 rgba(33, 33, 33, 0.5);
@@ -588,7 +591,22 @@ main {
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0 5px;
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50%;
+}
+.social__li--vk {
+  background-image: url("../img/vk.svg");
+}
+.social__li--gt {
+  background-image: url("../img/gt.svg");
+}
+.social__li--fs {
+  background-image: url("../img/fc.svg");
 }
 .ink {
   display: block;
@@ -636,6 +654,10 @@ main {
   .skill__description {
     height: auto;
   }
+  .myself__form {
+    width: 100%;
+    max-width: 500px;
+  }
   .myself__txt {
     line-height: 22.4px;
   }
@@ -660,5 +682,18 @@ main {
   .card__description,
   .skill__description {
     line-height: 22.4px;
+  }
+  .great-footer__wrapper {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .great-footer__number,
+  .great-footer__email {
+    width: 100%;
+    text-align: center;
+  }
+  .social {
+    width: 100%;
+    margin: 20px 0;
   }
 }
