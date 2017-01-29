@@ -3,6 +3,7 @@ var less = require('gulp-less');
 var path = require('path');
 var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
+var csso = require('gulp-csso');
 
 
 gulp.task('less', function () {
@@ -14,6 +15,7 @@ gulp.task('less', function () {
             browsers: ['last 2 versions'],
             cascade: false
      }))
+    .pipe(csso())
     .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({
       stream: true
