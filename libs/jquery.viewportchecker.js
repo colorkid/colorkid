@@ -171,26 +171,3 @@
         return this;
     };
 })(jQuery);
-
-
-jQuery(document).ready(function() {
-        jQuery('.row__part').addClass("row__part_hidden").viewportChecker({
-        classToAdd: 'row__part_visible',
-        offset: -90
-        });
-
-        jQuery('.card').addClass("card_hidden").viewportChecker({
-        classToAdd: 'card_visible',
-        offset: 100
-        });
-
-        jQuery('.message').addClass("message_hidden").viewportChecker({
-        classToAdd: 'message_visible',
-        offset: 50
-        });
-
-        jQuery('.callback__form').addClass("callback__form_hidden").viewportChecker({
-        classToAdd: 'callback__form_visible',
-        offset: 200
-        });
-});

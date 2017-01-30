@@ -1,18 +1,15 @@
 <?php
  /* Здесь проверяется существование переменных */
- if (isset($_POST['name'])) {$contact_name = $_POST['name'];}
- if (isset($_POST['email'])) {$contact_email = $_POST['email'];}
- if (isset($_POST['tel'])) {$contact_tel = $_POST['tel'];}
  if (isset($_POST['callback'])) {$general-message = $_POST['callback'];}
 
 /* Сюда впишите свою эл. почту */
- $address = "zharenkov.artem@gmail.com" ;
+ $address = "colorkid@yandex.ru" ;
 
 /* А здесь прописывается текст сообщения, \n - перенос строки */
- $mes = "Тема: Заказ обратного звонка!\nТелефон: $contact_tel\nИмя: $contact_name\nEmail: $contact_email\nСообщение: $callback ";
+ $mes = "Тема: Заказ обратного звонка!Сообщение: $callback ";
 
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
-$sub='Заказ с сайта'; //сабж
+$sub='Вакансия'; //сабж
 $email='<material@colorkid.ru>'; // от кого
  $send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");
 
